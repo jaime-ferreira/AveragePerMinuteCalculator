@@ -29,7 +29,7 @@ public class AveragePerMinuteCalculator {
         LocalDateTime windowStartMinuteMark = LocalDateTime.now().minusMinutes(windowSize);
 
         try {
-            calculateMovingAverage(inputFile, windowStartMinuteMark);
+            calculateAveragePerMinute(inputFile, windowStartMinuteMark);
         } catch (Exception e) {
             // Handle and print any exceptions that occur during execution.
             System.err.println("Error: " + e.getMessage());
@@ -37,7 +37,7 @@ public class AveragePerMinuteCalculator {
     }
 
     // Calculates the average duration of events in each minute until the current time for a pre-defined time window.
-    private static void calculateMovingAverage(String inputFile, LocalDateTime windowSizeMinuteMark)
+    private static void calculateAveragePerMinute(String inputFile, LocalDateTime windowSizeMinuteMark)
             throws Exception {
         try (BufferedReader br = new BufferedReader(new FileReader(inputFile))) {
             int minuteDurationSum = 0;
