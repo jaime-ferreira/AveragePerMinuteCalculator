@@ -11,7 +11,7 @@ The arguments for the program are defined in the pom.xml file inside &lt;argumen
     <argument>8000</argument>
 </arguments>
 ``` 
-The 1st argument is the directory for the input file, the 2nd argument is the window size in minutes.
+The 1st argument is the path for the input file, the 2nd argument is the window size in minutes.
 
 ## How to run
 
